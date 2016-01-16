@@ -113,7 +113,7 @@ The test is calling our `plus_two` method with an argument value of `3` and expe
 [2] pry(#<RSpec::ExampleGroups::PlusTwo>)> 
 ```
 
-By checking the value of the variable on the last line of our method inside our pry console, we can see that `num` is set to `3` and therefore the method is returning `3`. 
+By checking the variable on the line of our method right beofre "binding.pry", we can see that it is `num`. Since the method is returning `3`, `num`'s value must be `3`, not `5`, as we expected it to be.
 
 How can we fix this method so that is behaves in the expected way? This method is called `plus_two` and the test is expecting a return value of `5`, given a `num` of `3`. Looks like our method should return the *sum* of the original number, plus 2, but our method, as it currently stands, is returning the original number. Play around with it inside your Pry console and get the test to pass. Remember to type `exit` in your terminal and then remove your `binding.pry` when you think your test will pass. 
 
